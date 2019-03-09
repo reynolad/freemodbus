@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "freemodbus", "demo.vcxproj", "{4828281A-F74A-4A4B-A259-3B0269488E0A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4828281A-F74A-4A4B-A259-3B0269488E0A}.Debug|x86.ActiveCfg = Debug|Win32
+		{4828281A-F74A-4A4B-A259-3B0269488E0A}.Debug|x86.Build.0 = Debug|Win32
+		{4828281A-F74A-4A4B-A259-3B0269488E0A}.Release|x86.ActiveCfg = Release|Win32
+		{4828281A-F74A-4A4B-A259-3B0269488E0A}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {76C2D48C-8703-405A-B08B-F1438E265F84}
+	EndGlobalSection
+EndGlobal
