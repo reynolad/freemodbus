@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Port">
+      <UniqueIdentifier>{dc66c33c-c69b-41d6-ac7e-0efd3fc23461}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modbus">
+      <UniqueIdentifier>{4f495ef4-c3d1-4131-93e9-bade508819be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modbus\functions">
+      <UniqueIdentifier>{f1195141-1216-438d-a2d6-2849429c0cf1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modbus\rtu">
+      <UniqueIdentifier>{621fdc1b-9d84-45bd-ba78-a429fd444fe2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modbus\ascii">
+      <UniqueIdentifier>{05e60f80-6099-4c50-a3af-8cb655b7e728}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Modbus\include">
+      <UniqueIdentifier>{e8498bdc-90cb-48ab-aa23-cf2687ec00e7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="demo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Port\portevent.c">
+      <Filter>Port</Filter>
+    </ClCompile>
+    <ClCompile Include="Port\portother.c">
+      <Filter>Port</Filter>
+    </ClCompile>
+    <ClCompile Include="Port\portserial.c">
+      <Filter>Port</Filter>
+    </ClCompile>
+    <ClCompile Include="Port\porttimer.c">
+      <Filter>Port</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modbus\mb.c">
+      <Filter>Modbus</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modbus\functions\mbfunccoils.c">
+      <Filter>Modbus\functions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modbus\functions\mbfuncdiag.c">
+      <Filter>Modbus\functions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modbus\functions\mbfuncdisc.c">
+      <Filter>Modbus\functions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modbus\functions\mbfuncholding.c">
+      <Filter>Modbus\functions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modbus\functions\mbfuncinput.c">
+      <Filter>Modbus\functions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modbus\functions\mbfuncother.c">
+      <Filter>Modbus\functions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modbus\functions\mbutils.c">
+      <Filter>Modbus\functions</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modbus\rtu\mbcrc.c">
+      <Filter>Modbus\rtu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modbus\rtu\mbrtu.c">
+      <Filter>Modbus\rtu</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\modbus\ascii\mbascii.c">
+      <Filter>Modbus\ascii</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Port\port.h">
+      <Filter>Port</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modbus\rtu\mbcrc.h">
+      <Filter>Modbus\rtu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modbus\rtu\mbrtu.h">
+      <Filter>Modbus\rtu</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modbus\ascii\mbascii.h">
+      <Filter>Modbus\ascii</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modbus\include\mb.h">
+      <Filter>Modbus\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modbus\include\mbconfig.h">
+      <Filter>Modbus\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modbus\include\mbframe.h">
+      <Filter>Modbus\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modbus\include\mbfunc.h">
+      <Filter>Modbus\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modbus\include\mbport.h">
+      <Filter>Modbus\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modbus\include\mbproto.h">
+      <Filter>Modbus\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\modbus\include\mbutils.h">
+      <Filter>Modbus\include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>
