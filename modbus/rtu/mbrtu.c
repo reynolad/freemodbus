@@ -212,6 +212,7 @@ eMBRTUSend( UCHAR ucSlaveAddress, const UCHAR * pucFrame, USHORT usLength )
         /* Activate the transmitter. */
         eSndState = STATE_TX_XMIT;
         vMBPortSerialEnable( FALSE, TRUE );
+        xMBRTUTransmitFSM(); // need to manually call this, due to C2000
     }
     else
     {

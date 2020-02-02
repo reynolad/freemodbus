@@ -14,22 +14,22 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
     </Filter>
     <Filter Include="Port">
-      <UniqueIdentifier>{dc66c33c-c69b-41d6-ac7e-0efd3fc23461}</UniqueIdentifier>
+      <UniqueIdentifier>{8d6a78f2-fda0-411b-807b-ed2a3e61366c}</UniqueIdentifier>
     </Filter>
     <Filter Include="Modbus">
-      <UniqueIdentifier>{4f495ef4-c3d1-4131-93e9-bade508819be}</UniqueIdentifier>
+      <UniqueIdentifier>{ee8b8bdc-e6c2-40fc-a6b6-ca021dbc1362}</UniqueIdentifier>
     </Filter>
     <Filter Include="Modbus\functions">
-      <UniqueIdentifier>{f1195141-1216-438d-a2d6-2849429c0cf1}</UniqueIdentifier>
+      <UniqueIdentifier>{99bcf852-98cd-471a-9960-e0c00ce32a9b}</UniqueIdentifier>
     </Filter>
     <Filter Include="Modbus\rtu">
-      <UniqueIdentifier>{621fdc1b-9d84-45bd-ba78-a429fd444fe2}</UniqueIdentifier>
+      <UniqueIdentifier>{dfeb7231-38b1-413b-ab5c-a3976a421567}</UniqueIdentifier>
     </Filter>
     <Filter Include="Modbus\ascii">
-      <UniqueIdentifier>{05e60f80-6099-4c50-a3af-8cb655b7e728}</UniqueIdentifier>
+      <UniqueIdentifier>{4b95a02d-67c3-41b8-a2af-09843cce80c7}</UniqueIdentifier>
     </Filter>
     <Filter Include="Modbus\include">
-      <UniqueIdentifier>{e8498bdc-90cb-48ab-aa23-cf2687ec00e7}</UniqueIdentifier>
+      <UniqueIdentifier>{88712ecc-c6e0-41ea-82ac-a19e18bc8a7c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

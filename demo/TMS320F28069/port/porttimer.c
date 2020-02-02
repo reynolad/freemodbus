@@ -33,60 +33,40 @@
 #define MB_TIMER_TICKS          ( 20000L )
 
 /* ----------------------- Static variables ---------------------------------*/
-static USHORT   usTimerOCRADelta;
-static USHORT   usTimerOCRBDelta;
 
 /* ----------------------- Start implementation -----------------------------*/
 BOOL
 xMBPortTimersInit( USHORT usTim1Timeout50us )
 {
     BOOL            bInitialized = FALSE;
-    ULONG           ulReloadValue = ( ACLK * ( ULONG )usTim1Timeout50us ) / MB_TIMER_TICKS;
 
-    if( ulReloadValue <= 1 )
+    // this function is provided with the number of 50us increments the counter should count
+
+    if( usTim1Timeout50us <= 1 )
     {
-        ulReloadValue = 1;
-    }
-    else
-    {
-        ulReloadValue -= 1;
+        usTim1Timeout50us = 1;
     }
 
-    if( ulReloadValue < 0xFFFE )
-    {
-        /* Timer A clock source is ACLK, Start disabled. */
-        TACTL = TASSEL0;
-        TACCR0 = ( USHORT ) ulReloadValue;
-        /* Enable Timer A caputer compare interrupt. */
-        TACCTL0 = CCIE;
+    MB_initTimer(usTim1Timeout50us);
+    bInitialized = TRUE;
 
-        bInitialized = TRUE;
-    }
     return bInitialized;
 }
 
 void
 vMBPortTimersEnable( void )
 {
-    /* Reset timer counter and set compare interrupt. */
-    TAR = 0;
-    TACCTL0 |= CCIE;
-    TACTL |= MC0;
+    MB_enableTimer();
 }
 
 void
 vMBPortTimersDisable( void )
 {
-    TACCTL0 &= ~CCIE;
-    TACTL &= ~( MC0 | MC1 );
+    MB_disableTimer();
 }
 
-#if defined (__GNUC__)
-interrupt (TIMERA0_VECTOR) prvvMBTimerIRQHandler( void )
-#else
-void
-prvvMBTimerIRQHandler( void ) __interrupt[TIMERA0_VECTOR]
-#endif
+void MB_timerISR(void)
 {
     ( void )pxMBPortCBTimerExpired(  );
 }
+

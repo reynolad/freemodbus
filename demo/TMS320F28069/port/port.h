@@ -23,8 +23,7 @@
 #define _PORT_H
 
 /* ----------------------- Platform includes --------------------------------*/
-
-//#include <msp430x16x.h>
+#include <stdint.h>
 #if defined (__GNUC__)
 #include <signal.h>
 #endif
@@ -38,9 +37,6 @@
 #define ENTER_CRITICAL_SECTION( )   EnterCriticalSection( )
 #define EXIT_CRITICAL_SECTION( )    ExitCriticalSection( )
 #define assert( expr )
-
-#define SMCLK                       ( 4000000UL )
-#define ACLK                        ( 32768UL )
 
 typedef char    BOOL;
 
@@ -65,5 +61,20 @@ typedef long    LONG;
 void            EnterCriticalSection( void );
 void            ExitCriticalSection( void );
 
+void MB_rxISR(void);
+void MB_txISR(void);
+void MB_timerISR(void);
 
-#endif
+// extern function definitions to hook into HAL layer in MW
+extern void MB_enableSerial(uint16_t xRxEnable, uint16_t xTxEnable);
+extern void MB_initSerial(uint32_t ulBaudRate, uint16_t ucDataBits, uint16_t eParity); // todo: fix parity
+extern void MB_putByteSerial(uint16_t ucByte);
+extern void MB_getByteSerial(uint16_t * pucByte);
+extern void MB_enterCriticalSection(void);
+extern void MB_exitCriticalSection(void);
+extern void MB_initTimer(uint16_t usTim1Timeout50us);
+extern void MB_enableTimer(void);
+extern void MB_disableTimer(void);
+
+
+#endif //_PORT_H
