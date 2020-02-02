@@ -27,7 +27,7 @@
 #include "mbport.h"
 
 /* ----------------------- Defines ------------------------------------------*/
-
+extern BOOL xMBRTUTransmitFSM( void );
 /* ----------------------- Static variables ---------------------------------*/
 UCHAR           ucCriticalNesting = 0x00;
 
@@ -37,6 +37,10 @@ vMBPortSerialEnable( BOOL xRxEnable, BOOL xTxEnable )
 {
     ENTER_CRITICAL_SECTION(  );
     MB_enableSerial(xRxEnable, xTxEnable);
+    if(xTxEnable)
+    { // need to manually call this, due to C2000
+        xMBRTUTransmitFSM();
+    }
     EXIT_CRITICAL_SECTION(  );
 }
 
