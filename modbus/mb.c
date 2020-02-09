@@ -328,7 +328,7 @@ eMBDisable( void )
 }
 
 eMBErrorCode
-eMBPoll( void )
+eMBPoll( eMBEventType *retEvent )
 {
     static UCHAR   *ucMBFrame;
     static UCHAR    ucRcvAddress;
@@ -340,6 +340,8 @@ eMBPoll( void )
     eMBErrorCode    eStatus = MB_ENOERR;
     eMBEventType    eEvent;
 
+    *retEvent = EV_READY;
+
     /* Check if the protocol stack is ready. */
     if( eMBState != STATE_ENABLED )
     {
@@ -350,6 +352,8 @@ eMBPoll( void )
      * Otherwise we will handle the event. */
     if( xMBPortEventGet( &eEvent ) == TRUE )
     {
+        *retEvent = eEvent;
+
         switch ( eEvent )
         {
         case EV_READY:
@@ -404,6 +408,14 @@ eMBPoll( void )
             break;
 
         case EV_FRAME_SENT:
+            if(MB_txEmpty())
+            {
+                vMBPortSerialEnable( TRUE, FALSE );
+            }
+            else
+            {
+                xMBPortEventPost( EV_FRAME_SENT );
+            }
             break;
         }
     }

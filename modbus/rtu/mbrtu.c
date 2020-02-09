@@ -310,7 +310,7 @@ xMBRTUTransmitFSM( void )
             xNeedPoll = xMBPortEventPost( EV_FRAME_SENT );
             /* Disable transmitter. This prevents another transmit buffer
              * empty interrupt. */
-            vMBPortSerialEnable( TRUE, FALSE );
+            //vMBPortSerialEnable( TRUE, FALSE ); this is handled in xMBPortEventPost( EV_FRAME_SENT )
             eSndState = STATE_TX_IDLE;
         }
         break;

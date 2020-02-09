@@ -80,6 +80,7 @@ extern void MB_putByteSerial(uint16_t ucByte);
 extern void MB_getByteSerial(uint16_t * pucByte);
 extern void MB_enterCriticalSection(void);
 extern void MB_exitCriticalSection(void);
+extern uint16_t MB_txEmpty(void);
 extern void MB_initTimer(uint16_t usTim1Timeout50us);
 extern void MB_enableTimer(void);
 extern void MB_disableTimer(void);
